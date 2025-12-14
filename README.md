@@ -64,22 +64,22 @@ A secure and scalable full-stack payment application that allows users to:
 - Centralized error handling
 
 **Folder Structure**
-backend/
-├─ ─ controllers/        # Business logic (auth, account, users)
-├─ ─ models/             # Mongoose schemas
-├─ ─ routes/             # Route definitions
-├─ ─ middlewares/        # JWT auth middleware
-├─ ─ db.js               # MongoDB connection
-├─ ─ config.js           # Environment variables
-└─ ─ server.js           # Express app entry
+backend/<br>
+├─ ─ controllers/        # Business logic (auth, account, users)<br>
+├─ ─ models/             # Mongoose schemas<br>
+├─ ─ routes/             # Route definitions<br>
+├─ ─ middlewares/        # JWT auth middleware<br>
+├─ ─ db.js               # MongoDB connection<br>
+├─ ─ config.js           # Environment variables<br>
+└─ ─ server.js           # Express app entry<br>
 
-frontend/
-├── src/
-│   ├─ ─ components/     # UI components
-│   ├─ ─ pages/          # Screens
-│   ├─ ─ api.js          # Axios client with token interceptor
-│   ├─ ─ App.jsx
-│   └─ ─ main.jsx
+frontend/<br>
+├── src/<br>
+│   ├─ ─ components/     # UI components<br>
+│   ├─ ─ pages/          # Screens<br>
+│   ├─ ─ api.js          # Axios client with token interceptor<br>
+│   ├─ ─ App.jsx<br>
+│   └─ ─ main.jsx<br>
 
 
 
@@ -124,3 +124,4 @@ GET&nbsp;&nbsp;	/user/bulk&nbsp;&nbsp;	Search users<br>
 - Real-time balance updates (WebSockets)
 - Transaction categories & notes
 - Email/phone OTP login
+
