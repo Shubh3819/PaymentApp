@@ -1,0 +1,128 @@
+INSTALLATION GUIDE – FRONTEND & BACKEND
+
+This guide explains how to install and run the project locally.
+
+PREREQUISITES
+
+Node.js (v18 or above recommended)
+Check using:
+node -v
+
+npm (comes with Node.js)
+Check using:
+npm -v
+
+MongoDB
+
+Either MongoDB Atlas (cloud)
+
+Or local MongoDB running on your system
+
+Git (optional)
+
+BACKEND SETUP
+
+Step 1: Navigate to backend folder
+cd backend
+
+Step 2: Install backend dependencies
+npm install
+
+Step 3: Create a .env file inside backend folder
+Add the following variables:
+
+PORT=3000
+MONGO_URI=mongodb://127.0.0.1:27017
+JWT_SECRET=your_secret_key
+FRONTEND_ORIGIN=http://localhost:5173
+
+(If using MongoDB Atlas, replace MONGO_URI with Atlas connection string.)
+
+Step 4: Start the backend server
+npm start
+
+OR (if using nodemon)
+npm run dev
+
+Backend will run at:
+http://localhost:3000
+
+Test backend by opening:
+http://localhost:3000/
+
+Expected response:
+{ "ok": true }
+
+FRONTEND SETUP
+
+Step 1: Navigate to frontend folder (open a new terminal)
+cd frontend
+
+Step 2: Install frontend dependencies
+npm install
+
+Step 3: Create a .env file inside frontend folder
+Add the following variable:
+
+VITE_API_BASE=http://localhost:3000/api/v1
+
+Step 4: Start the frontend server
+npm run dev
+
+Frontend will run at:
+http://localhost:5173
+
+CONNECTING FRONTEND AND BACKEND
+
+Frontend uses Axios to send requests
+
+Base URL points to backend API
+
+JWT token is stored in localStorage after login
+
+Axios interceptor automatically attaches token:
+Authorization: Bearer <token>
+
+Backend verifies token and processes request
+
+TESTING THE APPLICATION
+
+Open frontend in browser
+
+Sign up a new user
+
+Sign in
+
+Check wallet balance
+
+Search other users
+
+Transfer money
+
+View transaction history
+
+COMMON ISSUES
+
+MongoDB not connecting:
+
+Ensure MongoDB service is running
+
+Check MONGO_URI value
+
+CORS error:
+
+FRONTEND_ORIGIN must match frontend URL
+
+401 Unauthorized:
+
+Check token exists in localStorage
+
+Verify JWT_SECRET matches backend
+
+PRODUCTION BUILD (OPTIONAL)
+
+Frontend build:
+npm run build
+
+Backend production start:
+NODE_ENV=production npm start
